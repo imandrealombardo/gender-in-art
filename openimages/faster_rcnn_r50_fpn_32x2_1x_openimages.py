@@ -23,3 +23,5 @@ lr_config = dict(
 # USER SHOULD NOT CHANGE ITS VALUES.
 # base_batch_size = (32 GPUs) x (2 samples per GPU)
 auto_scale_lr = dict(base_batch_size=64)
+
+load_from = 'https://download.openmmlab.com/mmdetection/v2.0/openimages/faster_rcnn_r50_fpn_32x2_cas_1x_openimages_challenge/faster_rcnn_r50_fpn_32x2_cas_1x_openimages_challenge_20220221_192021-34c402d9.pth'
