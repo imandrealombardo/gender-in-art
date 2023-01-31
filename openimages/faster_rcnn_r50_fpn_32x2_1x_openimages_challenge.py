@@ -1,6 +1,6 @@
 _base_ = ['faster_rcnn_r50_fpn_32x2_1x_openimages.py']
 
-dataset_type = 'CocoDataset'
+dataset_type = 'CustomDataset'
 data_root = '/var/scratch/mtafuro/'
 
 img_norm_cfg = dict(
