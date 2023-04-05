@@ -31,10 +31,12 @@ def create_coco_json(annotation_file, out_dir=None):
         tmp_df = df[df['ImageID'] == filename]
         img_path = os.path.join(base_dir, dataset, f'{filename}.jpg')
         height, width = mmcv.imread(img_path).shape[:2]
+        output_filename = f'{filename}.jpg'
+        print(output_filename)
 
         images.append(dict(
                 id=idx,
-                file_name=filename,
+                file_name=output_filename,
                 height=height,
                 width=width))
 
