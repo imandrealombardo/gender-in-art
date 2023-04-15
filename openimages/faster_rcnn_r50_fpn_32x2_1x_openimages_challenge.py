@@ -51,7 +51,7 @@ data = dict(
         img_prefix=data_root + 'test/',
         pipeline=test_pipeline))
 
-evaluation = dict(interval=1, metric='mAP')
+evaluation = dict(interval=1, metric='bbox')
 
 # NOTE: `auto_scale_lr` is for automatically scaling LR,
 # USER SHOULD NOT CHANGE ITS VALUES.
