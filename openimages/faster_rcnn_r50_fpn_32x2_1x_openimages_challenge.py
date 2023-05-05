@@ -1,6 +1,7 @@
 _base_ = ['faster_rcnn_r50_fpn_32x2_1x_openimages.py']
 
 dataset_type = 'CocoDataset'
+classes = ('Predominantly Feminine', 'Unknown', 'Predominantly Masculine')
 data_root = '/var/scratch/mtafuro/'
 
 img_norm_cfg = dict(
@@ -37,16 +38,19 @@ data = dict(
     # workers_per_gpu=2,
     train=dict(
         type=dataset_type,
+        classes=classes,
         ann_file=data_root + 'miap_train_gender.json',
         img_prefix=data_root + 'train/',
         pipeline=train_pipeline),
     val=dict(
         type=dataset_type,
+        classes=classes,
         ann_file=data_root + 'miap_val_gender.json',
         img_prefix=data_root + 'val/',
         pipeline=test_pipeline),
     test=dict(
         type=dataset_type,
+        classes=classes,
         ann_file=data_root + 'miap_test_gender.json',
         img_prefix=data_root + 'test/',
         pipeline=test_pipeline))
